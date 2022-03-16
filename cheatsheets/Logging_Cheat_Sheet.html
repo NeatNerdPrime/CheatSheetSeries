@@ -10,11 +10,10 @@
       
       
       
-      
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
@@ -22,30 +21,28 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6f955dcd.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+
     
     
   </head>
@@ -59,7 +56,6 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -76,9 +72,12 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+    
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -108,19 +107,22 @@
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -137,11 +139,10 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -150,11 +151,14 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,7 +174,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -179,11 +183,10 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -246,8 +249,38 @@
   
   
     <li class="md-nav__item">
+      <a href="../IndexMASVS.html" class="md-nav__link">
+        Index MASVS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         Index Proactive Controls
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IndexTopTen.html" class="md-nav__link">
+        Index Top 10
       </a>
     </li>
   
@@ -266,20 +299,25 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
-      <label class="md-nav__link" for="__nav_5">
-        Cheatsheets
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Cheatsheets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Cheatsheets
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -290,8 +328,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -302,8 +342,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -314,8 +356,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -326,8 +370,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -338,8 +384,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
+        Authorization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -350,8 +412,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -362,8 +426,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -374,8 +440,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -386,8 +454,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -398,8 +468,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -410,8 +482,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -422,8 +496,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -434,8 +510,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -446,8 +524,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -458,8 +538,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -470,8 +552,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -482,8 +566,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -494,8 +580,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -506,8 +594,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -518,8 +608,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -530,8 +622,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -542,8 +636,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -554,8 +650,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -566,8 +664,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -578,8 +678,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -590,8 +692,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HTTP_Headers_Cheat_Sheet.html" class="md-nav__link">
+        HTTP Headers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -602,8 +720,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Infrastructure_as_Code_Security_Cheat_Sheet.html" class="md-nav__link">
+        Infrastructure as Code Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -614,8 +748,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -626,8 +762,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -638,8 +776,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -650,8 +790,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -662,8 +804,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -674,8 +818,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -686,8 +832,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -698,8 +846,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -710,20 +860,24 @@
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="Laravel_CheatSheet.html" class="md-nav__link">
-        Laravel CheatSheet.md
+      <a href="Laravel_Cheat_Sheet.html" class="md-nav__link">
+        Laravel
       </a>
     </li>
   
 
+            
           
             
+              
   
   
     
@@ -747,6 +901,7 @@
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -882,6 +1037,47 @@
           <li class="md-nav__item">
   <a href="#disposal-of-logs" class="md-nav__link">
     Disposal of logs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attacks-on-logs" class="md-nav__link">
+    Attacks on Logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Attacks on Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confidentiality" class="md-nav__link">
+    Confidentiality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrity" class="md-nav__link">
+    Integrity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    Availability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accountability" class="md-nav__link">
+    Accountability
   </a>
   
 </li>
@@ -905,8 +1101,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
+        Logging Vocabulary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -917,8 +1129,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -929,8 +1143,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -941,8 +1157,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -953,8 +1171,38 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NPM_Security_Cheat_Sheet.html" class="md-nav__link">
+        NPM Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
+        NodeJS Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -965,8 +1213,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -977,8 +1227,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -989,8 +1241,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1001,8 +1255,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1013,8 +1269,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1025,8 +1283,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1037,8 +1297,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1049,8 +1311,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1061,8 +1325,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1073,8 +1339,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1085,8 +1353,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Secrets_Management_CheatSheet.html" class="md-nav__link">
+        Secrets Management CheatSheet.md
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -1097,8 +1381,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1109,8 +1395,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1121,8 +1409,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1133,8 +1423,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1145,8 +1437,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1157,8 +1451,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1169,8 +1465,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1181,8 +1479,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1193,8 +1493,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1205,8 +1507,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1217,8 +1521,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1229,8 +1535,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1241,8 +1549,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1253,8 +1563,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1265,8 +1577,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1277,6 +1591,35 @@
     </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="XSS_Filter_Evasion_Cheat_Sheet.html" class="md-nav__link">
+        XSS Filter Evasion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
+        XS Leaks
+      </a>
+    </li>
+  
+
+            
           
         </ul>
       </nav>
@@ -1296,6 +1639,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1431,6 +1775,47 @@
           <li class="md-nav__item">
   <a href="#disposal-of-logs" class="md-nav__link">
     Disposal of logs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attacks-on-logs" class="md-nav__link">
+    Attacks on Logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Attacks on Logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confidentiality" class="md-nav__link">
+    Confidentiality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrity" class="md-nav__link">
+    Integrity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    Availability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accountability" class="md-nav__link">
+    Accountability
   </a>
   
 </li>
@@ -1459,8 +1844,9 @@
             <article class="md-content__inner md-typeset">
               
                 
-                
-                <h1 id="logging-cheat-sheet">Logging Cheat Sheet<a class="headerlink" href="#logging-cheat-sheet" title="Permanent link">&para;</a></h1>
+
+
+<h1 id="logging-cheat-sheet">Logging Cheat Sheet<a class="headerlink" href="#logging-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>This cheat sheet is focused on providing developers with concentrated guidance on building application logging mechanisms, especially related to security logging.</p>
 <p>Many systems enable network device, operating system, web server, mail server and database server logging, but often custom application event logging is missing, disabled or poorly configured. It provides much greater insight than infrastructure logging alone. Web application (e.g. web site or web service) logging is much more than having web server logs enabled (e.g. using Extended Log File Format).</p>
@@ -1471,7 +1857,7 @@
 <li>Identifying security incidents</li>
 <li>Monitoring policy violations</li>
 <li>Establishing baselines</li>
-<li>Assisting non-repudiation controls</li>
+<li>Assisting non-repudiation controls (note that the trait non-repudiation is hard to achieve for logs because their trustworthiness is often just based on the logging party being audited properly while mechanisms like digital signatures are hard to utilize here)</li>
 <li>Providing information about problems and unusual conditions</li>
 <li>Contributing additional application-specific data for incident investigation which is lacking in other log sources</li>
 <li>Helping defend against vulnerability identification and exploitation through attack detection</li>
@@ -1633,7 +2019,7 @@
 <p>It may be desirable to be able to alter the level of logging (type of events based on severity or threat level, amount of detail recorded). If this is implemented, ensure that:</p>
 <ul>
 <li>The default level must provide sufficient detail for business needs</li>
-<li>It should not be possible to completely inactivate application logging or logging of events that are necessary for compliance requirements</li>
+<li>It should not be possible to completely deactivate application logging or logging of events that are necessary for compliance requirements</li>
 <li>Alterations to the level/extent of logging must be intrinsic to the application (e.g. undertaken automatically by the application based on an approved algorithm) or follow change management processes (e.g. changes to configuration data, modification of source code)</li>
 <li>The logging level must be verified periodically</li>
 </ul>
@@ -1705,6 +2091,35 @@
 <h3 id="disposal-of-logs">Disposal of logs<a class="headerlink" href="#disposal-of-logs" title="Permanent link">&para;</a></h3>
 <p>Log data, temporary debug logs, and backups/copies/extractions, must not be destroyed before the duration of the required data retention period, and must not be kept beyond this time.</p>
 <p>Legal, regulatory and contractual obligations may impact on these periods.</p>
+<h2 id="attacks-on-logs">Attacks on Logs<a class="headerlink" href="#attacks-on-logs" title="Permanent link">&para;</a></h2>
+<p>Because of their usefulness as a defense, logs may be a target of attacks.</p>
+<h3 id="confidentiality">Confidentiality<a class="headerlink" href="#confidentiality" title="Permanent link">&para;</a></h3>
+<p>Who should be able to read what? A confidentiality attack enables an unauthorized party to access sensitive information stored in logs.</p>
+<ul>
+<li>Logs contain PII of users. Attackers gather PII, then either release it or use it as a stepping stone for futher attacks on those users.</li>
+<li>Logs contain technical secrets such as passwords. Attackers use it as a stepping stone for deeper attacks.</li>
+</ul>
+<h3 id="integrity">Integrity<a class="headerlink" href="#integrity" title="Permanent link">&para;</a></h3>
+<p>Which information should be modifiable by whom?</p>
+<ul>
+<li>An attacker with read access to a log uses it to exfiltrate secrets.</li>
+<li>An attack leverages logs to connect with exploitable facets of logging platforms, such as sending in a payload over syslog in order to cause an out-of-bounds write.</li>
+</ul>
+<h3 id="availability">Availability<a class="headerlink" href="#availability" title="Permanent link">&para;</a></h3>
+<p>What downtime is acceptable?</p>
+<ul>
+<li>An attacker floods log files in order to exhaust disk space available for non-logging facets of system functioning. For example, the same disk used for log files might be used for SQL storage of application data.</li>
+<li>An attacker floods log files in order to exhaust disk space available for further logging.</li>
+<li>An attacker uses one log entry to destroy other log entries.</li>
+<li>An attacker leverages poor performance of logging code to reduce application performance</li>
+</ul>
+<h3 id="accountability">Accountability<a class="headerlink" href="#accountability" title="Permanent link">&para;</a></h3>
+<p>Who is responsible for harm?</p>
+<ul>
+<li>An attacker prevent writes in order to cover their tracks.</li>
+<li>An attacker prevent damages the log in order to cover their tracks.</li>
+<li>An attacker causes the wrong identity to be logged in order to conceal the responsible party.</li>
+</ul>
 <h2 id="related-articles">Related articles<a class="headerlink" href="#related-articles" title="Permanent link">&para;</a></h2>
 <ul>
 <li>OWASP <a href="https://owasp.org/www-project-enterprise-security-api/">ESAPI Documentation</a>.</li>
@@ -1720,13 +2135,6 @@
 <li>Other <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/bb986747(v=vs.85).aspx">Common Log File System (CLFS), Microsoft</a>.</li>
 <li>Other <a href="http://www.symantec.com/connect/articles/building-secure-applications-consistent-logging">Building Secure Applications: Consistent Logging, Rohit Sethi &amp; Nish Bhalla, Symantec Connect</a>.</li>
 </ul>
-                
-                  
-                
-              
-              
-                
-
 
               
             </article>
@@ -1735,12 +2143,12 @@
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="Laravel_CheatSheet.html" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="Laravel_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Laravel" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1749,19 +2157,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Laravel CheatSheet.md
+              Laravel
             </div>
           </div>
         </a>
       
       
-        <a href="Mass_Assignment_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="Logging_Vocabulary_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: Logging Vocabulary" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Mass Assignment
+              Logging Vocabulary
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1773,18 +2182,19 @@
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
-          </div>
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-        
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -1794,10 +2204,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
       
     
   </body>

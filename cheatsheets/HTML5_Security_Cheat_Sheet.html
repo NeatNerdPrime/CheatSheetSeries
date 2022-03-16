@@ -10,11 +10,10 @@
       
       
       
-      
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
@@ -22,30 +21,28 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6f955dcd.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+
     
     
   </head>
@@ -59,7 +56,6 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -76,9 +72,12 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+    
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -108,19 +107,22 @@
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -137,11 +139,10 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -150,11 +151,14 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,7 +174,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
+    <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
   <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
 
@@ -179,11 +183,10 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -246,8 +249,38 @@
   
   
     <li class="md-nav__item">
+      <a href="../IndexMASVS.html" class="md-nav__link">
+        Index MASVS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         Index Proactive Controls
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IndexTopTen.html" class="md-nav__link">
+        Index Top 10
       </a>
     </li>
   
@@ -266,20 +299,25 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
-      <label class="md-nav__link" for="__nav_5">
-        Cheatsheets
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Cheatsheets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Cheatsheets" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Cheatsheets
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -290,8 +328,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -302,8 +342,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -314,8 +356,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -326,8 +370,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -338,8 +384,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
+        Authorization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -350,8 +412,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -362,8 +426,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -374,8 +440,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -386,8 +454,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -398,8 +468,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -410,8 +482,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -422,8 +496,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -434,8 +510,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -446,8 +524,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -458,8 +538,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -470,8 +552,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -482,8 +566,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -494,8 +580,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -506,8 +594,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -518,8 +608,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -530,8 +622,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -542,8 +636,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -554,8 +650,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -566,8 +664,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -578,8 +678,10 @@
     </li>
   
 
+            
           
             
+              
   
   
     
@@ -603,6 +705,7 @@
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -795,8 +898,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HTTP_Headers_Cheat_Sheet.html" class="md-nav__link">
+        HTTP Headers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -807,8 +926,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Infrastructure_as_Code_Security_Cheat_Sheet.html" class="md-nav__link">
+        Infrastructure as Code Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -819,8 +954,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -831,8 +968,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -843,8 +982,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -855,8 +996,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -867,8 +1010,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -879,8 +1024,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -891,8 +1038,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -903,8 +1052,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -915,20 +1066,24 @@
     </li>
   
 
+            
           
             
+              
   
   
   
     <li class="md-nav__item">
-      <a href="Laravel_CheatSheet.html" class="md-nav__link">
-        Laravel CheatSheet.md
+      <a href="Laravel_Cheat_Sheet.html" class="md-nav__link">
+        Laravel
       </a>
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -939,8 +1094,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
+        Logging Vocabulary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -951,8 +1122,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -963,8 +1136,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -975,8 +1150,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -987,8 +1164,38 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NPM_Security_Cheat_Sheet.html" class="md-nav__link">
+        NPM Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
+        NodeJS Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -999,8 +1206,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1011,8 +1220,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1023,8 +1234,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1035,8 +1248,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1047,8 +1262,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1059,8 +1276,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1071,8 +1290,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1083,8 +1304,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1095,8 +1318,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1107,8 +1332,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1119,8 +1346,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Secrets_Management_CheatSheet.html" class="md-nav__link">
+        Secrets Management CheatSheet.md
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -1131,8 +1374,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1143,8 +1388,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1155,8 +1402,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1167,8 +1416,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1179,8 +1430,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1191,8 +1444,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1203,8 +1458,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1215,8 +1472,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1227,8 +1486,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1239,8 +1500,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1251,8 +1514,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1263,8 +1528,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1275,8 +1542,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1287,8 +1556,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1299,8 +1570,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1311,6 +1584,35 @@
     </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="XSS_Filter_Evasion_Cheat_Sheet.html" class="md-nav__link">
+        XSS Filter Evasion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
+        XS Leaks
+      </a>
+    </li>
+  
+
+            
           
         </ul>
       </nav>
@@ -1330,6 +1632,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1527,8 +1830,9 @@
             <article class="md-content__inner md-typeset">
               
                 
-                
-                <h1 id="html5-security-cheat-sheet">HTML5 Security Cheat Sheet<a class="headerlink" href="#html5-security-cheat-sheet" title="Permanent link">&para;</a></h1>
+
+
+<h1 id="html5-security-cheat-sheet">HTML5 Security Cheat Sheet<a class="headerlink" href="#html5-security-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>The following cheat sheet serves as a guide for implementing HTML 5 in a secure fashion.</p>
 <h2 id="communication-apis">Communication APIs<a class="headerlink" href="#communication-apis" title="Permanent link">&para;</a></h2>
@@ -1545,15 +1849,15 @@
 <li>Both pages should only interpret the exchanged messages as <strong>data</strong>. Never evaluate passed messages as code (e.g. via <code>eval()</code>) or insert it to a page DOM (e.g. via <code>innerHTML</code>), as that would create a DOM-based XSS vulnerability. For more information see <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html">DOM based XSS Prevention Cheat Sheet</a>.</li>
 <li>To assign the data value to an element, instead of using a insecure method like <code>element.innerHTML=data;</code>, use the safer option: <code>element.textContent=data;</code></li>
 <li>Check the origin properly exactly to match the FQDN(s) you expect. Note that the following code: <code>if(message.origin.indexOf(".owasp.org")!=-1) { /* ... */ }</code> is very insecure and will not have the desired behavior as <code>owasp.org.attacker.com</code> will match.</li>
-<li>If you need to embed external content/untrusted gadgets and allow user-controlled scripts (which is highly discouraged), consider using a JavaScript rewriting framework such as <a href="http://code.google.com/p/google-caja/">Google Caja</a> or check the information on <a href="HTML5_Security_Cheat_Sheet.html#sandboxed-frames">sandboxed frames</a>.</li>
+<li>If you need to embed external content/untrusted gadgets and allow user-controlled scripts (which is highly discouraged), please check the information on <a href="HTML5_Security_Cheat_Sheet.html#sandboxed-frames">sandboxed frames</a>.</li>
 </ul>
 <h3 id="cross-origin-resource-sharing">Cross Origin Resource Sharing<a class="headerlink" href="#cross-origin-resource-sharing" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Validate URLs passed to <code>XMLHttpRequest.open</code>. Current browsers allow these URLs to be cross domain; this behavior can lead to code injection by a remote attacker. Pay extra attention to absolute URLs.</li>
 <li>Ensure that URLs responding with <code>Access-Control-Allow-Origin: *</code> do not include any sensitive content or information that might aid attacker in further attacks. Use the <code>Access-Control-Allow-Origin</code> header only on chosen URLs that need to be accessed cross-domain. Don't use the header for the whole domain.</li>
 <li>Allow only selected, trusted domains in the <code>Access-Control-Allow-Origin</code> header. Prefer allowing specific domains over blocking or allowing any domain (do not use <code>*</code> wildcard nor blindly return the <code>Origin</code> header content without any checks).</li>
-<li>Keep in mind that CORS does not prevent the requested data from going to an unauthenticated location. It's still important for the server to perform usual <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">CSRF</a> prevention.</li>
-<li>While the RFC recommends a pre-flight request with the <code>OPTIONS</code> verb, current implementations might not perform this request, so it's important that "ordinary" (<code>GET</code> and <code>POST</code>) requests perform any access control necessary.</li>
+<li>Keep in mind that CORS does not prevent the requested data from going to an unauthorized location. It's still important for the server to perform usual <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">CSRF</a> prevention.</li>
+<li>While the <a href="https://fetch.spec.whatwg.org/#http-cors-protocol">Fetch Standard</a> recommends a pre-flight request with the <code>OPTIONS</code> verb, current implementations might not perform this request, so it's important that "ordinary" (<code>GET</code> and <code>POST</code>) requests perform any access control necessary.</li>
 <li>Discard requests received over plain HTTP with HTTPS origins to prevent mixed content bugs.</li>
 <li>Don't rely only on the Origin header for Access Control checks. Browser always sends this header in CORS requests, but may be spoofed outside the browser. Application-level protocols should be used to protect sensitive data.</li>
 </ul>
@@ -1578,13 +1882,14 @@
 <h2 id="storage-apis">Storage APIs<a class="headerlink" href="#storage-apis" title="Permanent link">&para;</a></h2>
 <h3 id="local-storage">Local Storage<a class="headerlink" href="#local-storage" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Also known as Offline Storage, Web Storage. Underlying storage mechanism may vary from one user agent to the next. In other words, any authentication your application requires can be bypassed by a user with local privileges to the machine on which the data is stored. Therefore, it's recommended not to store any sensitive information in local storage.</li>
+<li>Also known as Offline Storage, Web Storage. Underlying storage mechanism may vary from one user agent to the next. In other words, any authentication your application requires can be bypassed by a user with local privileges to the machine on which the data is stored. Therefore, it's recommended to avoid storing any sensitive information in local storage where authentication would be assumed.</li>
+<li>Due to the browser's security guarantees it is appropriate to use local storage where access to the data is not assuming authentication or authorization.</li>
 <li>Use the object sessionStorage instead of localStorage if persistent storage is not needed. sessionStorage object is available only to that window/tab until the window is closed.</li>
 <li>A single <a href="https://owasp.org/www-community/attacks/xss/">Cross Site Scripting</a> can be used to steal all the data in these objects, so again it's recommended not to store sensitive information in local storage.</li>
 <li>A single <a href="https://owasp.org/www-community/attacks/xss/">Cross Site Scripting</a> can be used to load malicious data into these objects too, so don't consider objects in these to be trusted.</li>
-<li>Pay extra attention to "localStorage.getItem" and "setItem" calls implemented in HTML5 page. It helps in detecting when developers build solutions that put sensitive information in local storage, which is a bad practice.</li>
+<li>Pay extra attention to "localStorage.getItem" and "setItem" calls implemented in HTML5 page. It helps in detecting when developers build solutions that put sensitive information in local storage, which can be a severe risk if authentication or authorization to that data is incorrectly assumed.</li>
 <li>Do not store session identifiers in local storage as the data is always accessible by JavaScript. Cookies can mitigate this risk using the <code>httpOnly</code> flag.</li>
-<li>There is no way to restrict the visibility of an object to a specific path like with the attribute path of HTTP Cookies, every object is shared within an origin and protected with the Same Origin Policy. Avoid host multiple applications on the same origin, all of them would share the same localStorage object, use different subdomains instead.</li>
+<li>There is no way to restrict the visibility of an object to a specific path like with the attribute path of HTTP Cookies, every object is shared within an origin and protected with the Same Origin Policy. Avoid hosting multiple applications on the same origin, all of them would share the same localStorage object, use different subdomains instead.</li>
 </ul>
 <h3 id="client-side-databases">Client-side databases<a class="headerlink" href="#client-side-databases" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1595,7 +1900,7 @@
 </ul>
 <h2 id="geolocation">Geolocation<a class="headerlink" href="#geolocation" title="Permanent link">&para;</a></h2>
 <ul>
-<li>The Geolocation RFC recommends that the user agent ask the user's permission before calculating location. Whether or how this decision is remembered varies from browser to browser. Some user agents require the user to visit the page again in order to turn off the ability to get the user's location without asking, so for privacy reasons, it's recommended to require user input before calling <code>getCurrentPosition</code> or <code>watchPosition</code>.</li>
+<li>The <a href="https://www.w3.org/TR/2021/WD-geolocation-20211124/#security">Geolocation API</a> requires that user agents ask for the user's permission before calculating location. Whether or how this decision is remembered varies from browser to browser. Some user agents require the user to visit the page again in order to turn off the ability to get the user's location without asking, so for privacy reasons, it's recommended to require user input before calling <code>getCurrentPosition</code> or <code>watchPosition</code>.</li>
 </ul>
 <h2 id="web-workers">Web Workers<a class="headerlink" href="#web-workers" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1622,14 +1927,13 @@
 <li>For HTML links, add the attribute <code>rel="noopener noreferrer"</code> to every link.</li>
 <li>For JavaScript, use this function to open a window (or tab):</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="kd">function</span> <span class="nx">openPopup</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">windowFeatures</span><span class="p">){</span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">openPopup</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">windowFeatures</span><span class="p">){</span>
   <span class="c1">//Open the popup and set the opener and referrer policy instruction</span>
   <span class="kd">var</span> <span class="nx">newWindow</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="s1">&#39;noopener,noreferrer,&#39;</span> <span class="o">+</span> <span class="nx">windowFeatures</span><span class="p">);</span>
   <span class="c1">//Reset the opener link</span>
   <span class="nx">newWindow</span><span class="p">.</span><span class="nx">opener</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <ul>
 <li>Add the HTTP response header <code>Referrer-Policy: no-referrer</code> to every HTTP response sent by the application (<a href="https://owasp.org/www-project-secure-headers/">Header Referrer-Policy information</a>. This configuration will ensure that no referrer information is sent along with requests from the page.</li>
 </ul>
@@ -1663,9 +1967,8 @@
 <blockquote>
 <p>Access a financial account from a public computer. Even though one is logged-off, the next person who uses the machine can log-in because the browser autocomplete functionality. To mitigate this, we tell the input fields not to assist in any way.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">spellcheck</span><span class="o">=</span><span class="s">&quot;false&quot;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&quot;off&quot;</span> <span class="na">autocorrect</span><span class="o">=</span><span class="s">&quot;off&quot;</span> <span class="na">autocapitalize</span><span class="o">=</span><span class="s">&quot;off&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">spellcheck</span><span class="o">=</span><span class="s">&quot;false&quot;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&quot;off&quot;</span> <span class="na">autocorrect</span><span class="o">=</span><span class="s">&quot;off&quot;</span> <span class="na">autocapitalize</span><span class="o">=</span><span class="s">&quot;off&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">input</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <p>Text areas and input fields for PII (name, email, address, phone number) and login credentials (username, password) should be prevented from being stored in the browser. Use these HTML5 attributes to prevent the browser from storing PII from your form:</p>
 <ul>
 <li><code>spellcheck="false"</code></li>
@@ -1700,7 +2003,7 @@
 <p>During a websocket channel initiation, the browser sends the <strong>Origin</strong> HTTP request header that contains the source domain initiation for the request to handshake. Even if this header can be spoofed in a forged HTTP request (not browser based), it cannot be overridden or forced in a browser context. It then represents a good candidate to apply filtering according to an expected value.</p>
 <p>An example of an attack using this vector, named <em>Cross-Site WebSocket Hijacking (CSWSH)</em>, is described <a href="https://www.christian-schneider.net/CrossSiteWebSocketHijacking.html">here</a>.</p>
 <p>The code below defines a configuration that applies filtering based on an "allow list" of origins. This ensures that only allowed origins can establish a full handshake:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.owasp.encoder.Encode</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.owasp.encoder.Encode</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.slf4j.Logger</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.slf4j.LoggerFactory</span><span class="p">;</span>
 
@@ -1748,14 +2051,13 @@
 
 <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="authentication-and-inputoutput-validation">Authentication and Input/Output validation<a class="headerlink" href="#authentication-and-inputoutput-validation" title="Permanent link">&para;</a></h3>
 <p>When using websocket as communication channel, it's important to use an authentication method allowing the user to receive an access <em>Token</em> that is not automatically sent by the browser and then must be explicitly sent by the client code during each exchange.</p>
-<p><a href="https://jwt.io/introduction/">JSON Web Token</a> is a good candidate, because it allows the transport of access ticket information in a stateless and not alterable way. Moreover, it defines a validity timeframe. You can find additional information about JWT token hardening on this <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html">cheat sheet</a>.</p>
-<p><a href="http://json-schema.org/">JSON Validation Schema</a> are used to define and validate the expected content in input and ouput messages.</p>
+<p>HMAC digests are the simplest method, and <a href="https://jwt.io/introduction/">JSON Web Token</a> is a good feature rich alternative, because it allows the transport of access ticket information in a stateless and not alterable way. Moreover, it defines a validity timeframe. You can find additional information about JWT token hardening on this <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html">cheat sheet</a>.</p>
+<p><a href="http://json-schema.org/">JSON Validation Schema</a> are used to define and validate the expected content in input and output messages.</p>
 <p>The code below defines the complete authentication messages flow handling:</p>
 <p><strong>Authentication Web Socket endpoint</strong> - Provide a WS endpoint that enables authentication exchange</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.configurator.EndpointConfigurator</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.configurator.EndpointConfigurator</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.decoder.AuthenticationRequestDecoder</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.encoder.AuthenticationResponseEncoder</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.handler.AuthenticationMessageHandler</span><span class="p">;</span>
@@ -1831,9 +2133,8 @@
 
 <span class="p">}</span>
 </code></pre></div>
-
 <p><strong>Authentication message handler</strong> - Handle all authentication requests</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.enumeration.AccessLevel</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.enumeration.AccessLevel</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.util.AuthenticationUtils</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.vo.AuthenticationRequest</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.vo.AuthenticationResponse</span><span class="p">;</span>
@@ -1917,9 +2218,8 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p><strong>Utility class to manage JWT token</strong> - Handle the issuing and the validation of the access token. Simple JWT token has been used for the example (focus was made here on the global WS endpoint implementation) here without extra hardening (see this <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html">cheat sheet</a> to apply extra hardening on the JWT token)</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">com.auth0.jwt.JWT</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">com.auth0.jwt.JWT</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.auth0.jwt.JWTVerifier</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.auth0.jwt.algorithms.Algorithm</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.auth0.jwt.interfaces.DecodedJWT</span><span class="p">;</span>
@@ -1978,54 +2278,52 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p><strong>JSON schema of the input and output authentication message</strong> - Define the expected structure of the input and output messages from the authentication endpoint point of view</p>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;http://json-schema.org/schema#&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;AuthenticationRequest&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;login&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;^[a-zA-Z]{1,10}$&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-    <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;login&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;password&quot;</span>
-    <span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://json-schema.org/schema#&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AuthenticationRequest&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;login&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;pattern&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^[a-zA-Z]{1,10}$&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;login&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;password&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="p">{</span>
-<span class="nt">&quot;$schema&quot;</span><span class="p">:</span> <span class="s2">&quot;http://json-schema.org/schema#&quot;</span><span class="p">,</span>
-<span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;AuthenticationResponse&quot;</span><span class="p">,</span>
-<span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;isSuccess;&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;boolean&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;^[a-zA-Z0-9+/=\\._-]{0,500}$&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;pattern&quot;</span><span class="p">:</span> <span class="s2">&quot;^[a-zA-Z0-9!\\s]{0,100}$&quot;</span>
-    <span class="p">}</span>
-<span class="p">},</span>
-<span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;isSuccess&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;token&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;message&quot;</span>
-<span class="p">]</span>
-<span class="p">}</span>
+<span class="p">{</span><span class="w"></span>
+<span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://json-schema.org/schema#&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AuthenticationResponse&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;isSuccess;&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;pattern&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^[a-zA-Z0-9+/=\\._-]{0,500}$&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;pattern&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^[a-zA-Z0-9!\\s]{0,100}$&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
+<span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;isSuccess&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;token&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;message&quot;</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
-
 <p><strong>Authentication message decoder and encoder</strong> - Perform the JSON serialization/deserialization and the input/output validation using dedicated JSON Schema. It makes it possible to systematically ensure that all messages received and sent by the endpoint strictly respect the expected structure and content.</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.JsonNode</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.JsonNode</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.github.fge.jackson.JsonLoader</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.github.fge.jsonschema.core.exceptions.ProcessingException</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.github.fge.jsonschema.core.report.ProcessingReport</span><span class="p">;</span>
@@ -2134,8 +2432,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.JsonNode</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">com.fasterxml.jackson.databind.JsonNode</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.github.fge.jackson.JsonLoader</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.github.fge.jsonschema.core.exceptions.ProcessingException</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.github.fge.jsonschema.core.report.ProcessingReport</span><span class="p">;</span>
@@ -2222,7 +2519,6 @@
 
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Note that the same approach is used in the messages handling part of the POC. All messages exchanged between the client and the server are systematically validated using the same way, using dedicated JSON schemas linked to messages dedicated Encoder/Decoder (serialization/deserialization).</p>
 <h3 id="authorization-and-access-token-explicit-invalidation">Authorization and access token explicit invalidation<a class="headerlink" href="#authorization-and-access-token-explicit-invalidation" title="Permanent link">&para;</a></h3>
 <p>Authorization information is stored in the access token using the JWT <em>Claim</em> feature (in the POC the name of the claim is <em>access_level</em>). Authorization is validated when a request is received and before any other action using the user input information.</p>
@@ -2230,7 +2526,7 @@
 <p>Explicit token invalidation is interesting from a user's point of view because, often when tokens are used, the validity timeframe of the token is relatively long (it's common to see a valid timeframe superior to 1 hour) so it's important to allow a user to have a way to indicate to the system "OK, I have finished my exchange with you, so you can close our exchange session and cleanup associated links".</p>
 <p>It also helps the user to revoke itself of current access if a malicious concurrent access is detected using the same token (case of token stealing).</p>
 <p><strong>Token block list</strong> - Maintain a temporary list using memory and time limited Caching of hashes of token that are not allowed to be used anymore</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.apache.commons.jcs.JCS</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.apache.commons.jcs.JCS</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.apache.commons.jcs.access.CacheAccess</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.apache.commons.jcs.access.exception.CacheException</span><span class="p">;</span>
 
@@ -2313,9 +2609,8 @@
 
 <span class="p">}</span>
 </code></pre></div>
-
 <p><strong>Message handling</strong> - Process a request from a user to add a message in the list. Show a authorization validation approach example</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">com.auth0.jwt.interfaces.Claim</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">com.auth0.jwt.interfaces.Claim</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">com.auth0.jwt.interfaces.DecodedJWT</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.enumeration.AccessLevel</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">org.owasp.pocwebsocket.util.AccessTokenBlocklistUtils</span><span class="p">;</span>
@@ -2427,17 +2722,15 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h3 id="confidentiality-and-integrity">Confidentiality and Integrity<a class="headerlink" href="#confidentiality-and-integrity" title="Permanent link">&para;</a></h3>
 <p>If the raw version of the protocol is used (protocol <code>ws://</code>) then the transferred data is exposed to eavesdropping and potential on-the-fly alteration.</p>
 <p>Example of capture using <a href="https://www.wireshark.org/">Wireshark</a> and searching for password exchanges in the stored PCAP file, not printable characters has been explicitly removed from the command result:</p>
-<div class="codehilite"><pre><span></span><code>$ grep -aE <span class="s1">&#39;(password)&#39;</span> capture.pcap
+<div class="highlight"><pre><span></span><code>$ grep -aE <span class="s1">&#39;(password)&#39;</span> capture.pcap
 <span class="o">{</span><span class="s2">&quot;login&quot;</span>:<span class="s2">&quot;bob&quot;</span>,<span class="s2">&quot;password&quot;</span>:<span class="s2">&quot;bob123&quot;</span><span class="o">}</span>
 </code></pre></div>
-
 <p>There is a way to check, at WebSocket endpoint level, if the channel is secure by calling the method <code>isSecure()</code> on the <em>session</em> object instance.</p>
 <p>Example of implementation in the method of the endpoint in charge of setup of the session and affects the message handler:</p>
-<div class="codehilite"><pre><span></span><code><span class="cm">/**</span>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * Handle the beginning of an exchange</span>
 <span class="cm"> *</span>
 <span class="cm"> * @param session Exchange session information</span>
@@ -2462,15 +2755,7 @@
     <span class="n">LOG</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;[AuthenticationEndpoint] Session {} message handler affected for processing&quot;</span><span class="p">,</span> <span class="n">session</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Expose WebSocket endpoints only on <a href="https://kaazing.com/html5-websocket-security-is-strong/">wss://</a> protocol (WebSockets over SSL/TLS) in order to ensure <em>Confidentiality</em> and <em>Integrity</em> of the traffic like using HTTP over SSL/TLS to secure HTTP exchanges.</p>
-                
-                  
-                
-              
-              
-                
-
 
               
             </article>
@@ -2479,12 +2764,12 @@
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="GraphQL_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" rel="prev">
+        
+        <a href="GraphQL_Cheat_Sheet.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: GraphQL" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2499,13 +2784,14 @@
         </a>
       
       
-        <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" rel="next">
+        
+        <a href="HTTP_Headers_Cheat_Sheet.html" class="md-footer__link md-footer__link--next" aria-label="Next: HTTP Headers" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              HTTP Strict Transport Security
+              HTTP Headers
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2517,18 +2803,19 @@
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
-          </div>
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-        
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -2538,10 +2825,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
       
     
   </body>
