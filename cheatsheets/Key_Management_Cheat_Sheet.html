@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html">
       
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -113,6 +113,7 @@
         
           
           
+          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -120,6 +121,7 @@
             </label>
           
         
+          
           
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
@@ -1946,6 +1948,7 @@
 <p>According to <code>NIST SP 800-57 Part 1</code>, many algorithms and schemes that provide a security service use a <a href="https://en.wikipedia.org/wiki/Hash_function">hash function</a> as a component of the algorithm.</p>
 <p>Hash functions can be found in digital signature algorithms (<code>FIPS186</code>), Keyed-Hash Message Authentication Codes (HMAC) (<code>FIPS198</code>), key-derivation functions/methods (<code>NIST Special Publications (SP) 800-56A, 800-56B, 800-56C and 800-108</code>), and random number generators (<code>NIST SP 800-90A</code>). Approved hash functions are defined in <code>FIPS180</code>.</p>
 <p><code>NIST SP 800-57 Part 1</code> recognizes three basic classes of approved cryptographic algorithms: hash functions, symmetric- key algorithms and asymmetric-key algorithms. The classes are defined by the number of cryptographic keys that are used in conjunction with the algorithm.</p>
+<p>The NSA released a report, <a href="https://media.defense.gov/2022/Sep/07/2003071834/-1/-1/0/CSA_CNSA_2.0_ALGORITHMS_.PDF">Commercial National Security Algorithm Suite 2.0</a> which lists the cryptographic algorithms that are expected to be remain strong even with advances in quantum computing.</p>
 <h4 id="cryptographic-hash-functions">Cryptographic hash functions<a class="headerlink" href="#cryptographic-hash-functions" title="Permanent link">&para;</a></h4>
 <p>Cryptographic hash functions do not require keys. Hash functions generate a relatively small digest (hash value) from a (possibly) large input in a way that is fundamentally difficult to reverse (i.e., it is hard to find an input that will produce a given output). Hash functions are used as building blocks for key management, for example,</p>
 <ol>
@@ -2100,7 +2103,7 @@
 <li>Implement a secure process for updating the trust store.</li>
 </ol>
 <h2 id="cryptographic-key-management-libraries">Cryptographic Key Management Libraries<a class="headerlink" href="#cryptographic-key-management-libraries" title="Permanent link">&para;</a></h2>
-<p>Use only reputable crypto libraries that are well maintained and updated, as well as tested and validated by third-party organizations (e.g., <code>NIST</code>/<code>FIPS</code>)</p>
+<p>Use only reputable crypto libraries that are well maintained and updated, as well as tested and validated by third-party organizations (e.g., <code>NIST</code>/<code>FIPS</code>).</p>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://info.townsendsecurity.com/definitive-guide-to-encryption-key-management-fundamentals">The definitive guide to encryption key management fundamentals</a>.</li>
@@ -2186,7 +2189,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>
